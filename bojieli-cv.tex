@@ -1,0 +1,238 @@
+%
+% LaTeX source of my resume
+% =========================
+%
+% Heavily commented to to fit even LaTeX beginners (hopefully).
+%
+% See the `README.md` file for more info.
+%
+% This file is licensed under the CC-NC-ND Creative Commons license.
+%
+
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
+
+% Set the page margins.
+\usepackage[a4paper,margin=0.75in]{geometry}
+
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+
+
+
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+
+% title on top of the document
+\maintitle{Bojie Li}{}{Last update on \today}
+
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent\href{mailto:boj@mail.ustc.edu.cn}{boj\mbox{}@\mbox{}mail.ustc.edu.cn}\sbull
+\textsmaller{+}86.15011272877\sbull
+Blog: \href{https://ring0.me/}{ring0.me} (Chinese)
+\\
+\noindent 2nd year Ph.D. student\sbull
+Joint Ph.D. program with USTC and MSRA
+
+
+\spacedhrule{0.8em}{-0.8em}  % a horizontal line with some vertical spacing before and after
+
+\roottitle{Education}
+
+\headedsection  % sets the header for the section and includes any subsections
+{\href{http://ustc.edu.cn}{University of Science and Technology of China}}
+{\textsc{Hefei, Anhui, China}} {%
+	\headedsubsection
+	{Ph.D. in Computer Science}
+	{Sept. \apo14 -- present}
+	{\bodytext{Joint Ph.D. program with Microsoft Research. Advisor: \href{http://research.microsoft.com/en-us/people/kuntan/}{Kun Tan} in \href{http://research.microsoft.com/en-us/groups/wn/}{Wireless and Networking group.}}}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+{\href{http://ustc.edu.cn}{University of Science and Technology of China}}
+{\textsc{Hefei, Anhui, China}} {%
+	\headedsubsection
+	{B.S. in Computer Science (School of Gifted Young)}
+	{Sept. \apo10 -- June \apo14}
+	{}
+}
+
+\spacedhrule{0.5em}{-0.8em}
+
+\roottitle{Research Interests}
+
+\inlineheadsection{Data center networking:}{Network function virtualization.}
+\inlineheadsection{Reconfigurable hardware:}{High level synthesis, Heterogeneous computing.}
+
+\spacedhrule{1.0em}{-0.8em}
+
+\roottitle{Publications}
+
+\inlineheadsection
+{ClickNP: Highly Flexible and High-performance Network Processing with Reconfigurable Hardware}
+{\textbf{Bojie Li}, Kun Tan, Layong (Larry) Luo, Yanqing Peng, Renqian Luo, Ningyi Xu, Yongqiang Xiong and Peng Cheng \\
+\textit{Proceedings of the 2016 ACM conference on SIGCOMM} (\textbf{SIGCOMM'16}) (to appear)
+}
+
+\vspace{0.5em}
+
+\inlineheadsection
+{Fast and Cautious: Leveraging Multi-path Diversity for Transport Loss Recovery in Data Centers \quad}
+{Guo Chen, Yuanwei Lu, Yuan Meng, \textbf{Bojie Li}, Kun Tan, Dan Pei, Peng Cheng, Layong (Larry) Luo, Yongqiang Xiong, Xiaoliang Wang and Youjian Zhao \\
+	\textit{Proceedings of the 2016 USENIX Annual Technical Conference} (\textbf{ATC'16}) (to appear)
+}
+
+\vspace{0.5em}
+
+\spacedhrule{0.8em}{-0.8em}
+
+\roottitle{Research Experience (selected)}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {ClickNP Packet Processing Platform on FPGA}
+  {\textsc{Microsoft Research Asia}} {%
+  \headedsubsection
+    {SIGCOMM'16, first author, instructed by \href{http://research.microsoft.com/en-us/people/kuntan/}{Kun Tan}}
+    {July \apo15 -- Jan. \apo16}
+    {\bodytext{
+    	\begin{itemize}
+    	\item The first FPGA-accelerated platform for general network functions, written completely in high-level language and achieving 40 Gbps line rate as well as $<2\mu$s latency at any packet size.
+    	\item Support high throughput (25Gbps) and low latency (1$\mu$s) joint CPU-FPGA processing.
+    	\item Implement the ClickNP tool-chain, which can integrate with various commercial HLS tools.
+    	\item Work with two senior undergraduates to design and implement 100 elements and 5 network functions.
+    	\end{itemize}
+    }}
+}
+
+\headedsection  % sets the header for the section and includes any subsections
+  {Fault-tolerant Switch Software Architecture}
+  {\textsc{Microsoft Research Asia}} {%
+	\headedsubsection
+	{B.S. dissertation, instructed by \href{http://research.microsoft.com/en-us/people/kuntan/}{Kun Tan}}
+	{July \apo13 -- May \apo14}
+	{\bodytext{
+	\begin{itemize}
+		\item Design and implementation of a fault-tolerant switch software architecture allowing any component to fail or upgrade without interrupting data plane.
+		\item The control plane will automatically recover within 1 minute after the failed component restarts. 
+		\item Designed a daemon (SyncD) to virtualize lookup tables in programmable switching chip and resolve rule conflicts among clients.
+	\end{itemize}
+}}
+}
+
+\spacedhrule{0.5em}{-0.8em}
+
+\roottitle{Engineering Experience (selected)}
+
+\headedsection  % sets the header for the section and includes any subsections
+{\href{https://git.ustclug.org/boj/freeshell}{USTC Freeshell}}
+{\textsc{Univ. of Science and Tech. of China}} {%
+	\headedsubsection
+	{Founder and main developer}
+	{Jan. \apo13 -- July \apo14}
+	{\bodytext{
+			\begin{itemize}
+				\item Container-based IaaS service based on OpenVZ virtualization, supporting various Linux distributions.
+				\item Support migration, IPv4 \& IPv6, NAPT, port mapping and HTTP(S) proxy.
+				\item Support $\sim$2,000 active containers with merely 7 compute nodes, 1 storage node, 1 controller node and 2 network nodes. Optimize NFS and leverage local disk cache to improve storage efficiency.
+				\item The first IaaS service in USTC, have $\sim$1,500 users. 7K lines of PHP and 1K lines of bash code.
+			\end{itemize}
+		}}
+	}
+
+\headedsection  % sets the header for the section and includes any subsections
+{\href{https://git.ustclug.org/boj/openvpn-server/blob/master/www/index.html}{LUG VPN}}
+{\textsc{Univ. of Science and Tech. of China}} {%
+	\headedsubsection
+	{Founder and main developer}
+	{Jul. \apo13 -- July \apo14}
+	{\bodytext{
+			\begin{itemize}
+				\item Geolocation DNS-based policy routing, load balancing and failure recovery.
+				\item Access points and exit gateways in 6 ISPs, connected via GRE tunnels in star topology.
+				\item $\sim$1K active users, $\sim$10K active flows and $\sim$500 Mbps traffic in peak periods.
+			\end{itemize}
+		}}
+	}
+
+\headedsection  % sets the header for the section and includes any subsections
+{\href{https://git.ustclug.org/boj/compiler-backdoor}{Embedding Backdoor in an Open Source Compiler}}
+{\textsc{Univ. of Science and Tech. of China}} {%
+	\headedsubsection
+	{Course project of Hacker Reverse Engineering Technology}
+	{Sept. \apo12 -- Jan. \apo13}
+	{\bodytext{
+			\begin{itemize}
+				\item Implement Ken Thompson's Turing Award lecture \textit{Reflections of Trusting Trust} on \textbf{tcc} compiler.
+				\item Inserts backdoor to matches \textbf{sulogin} source code to insert login backdoor. The compiler backdoor bootstraps by matching its own source code.
+			\end{itemize}
+		}}
+	}
+
+\headedsection  % sets the header for the section and includes any subsections
+{\href{https://git.ustclug.org/boj/rtfs}{Real-time Disk File System}}
+{\textsc{Univ. of Science and Tech. of China}} {%
+	\headedsubsection
+	{Course project of Principles and Design of Operating Systems}
+	{Mar. \apo12 -- June \apo12}
+	{\bodytext{
+			\begin{itemize}
+			\item Improve block device scheduling algorithm and process 
+				   scheduler for RTLinux-3.2 to enforce strict priority and eliminate disruptions from non-real-time tasks.
+			\item Guarantee response time and throughput for real-time 
+				   tasks with burst, random, streaming or pipeline I/O modes.
+			\end{itemize}
+		}}
+	}
+
+\spacedhrule{0.5em}{-0.8em}
+
+\roottitle{Selected Awards}
+
+\headedsubsection
+{Microsoft Young Fellowship Scholarship}
+{Aug. \apo13}
+{}
+\headedsubsection
+{Best Creativity Award, Robogame 2011, USTC}
+{Oct. \apo11}
+{}
+\headedsubsection
+{First Prize (rank 10$^{th}$), China Mathematical Olympiad in Hebei province}
+{Oct. \apo09}
+{}
+\headedsubsection
+{Bronze Medal (rank 69$^{th}$), National Olympiad in Informatics}
+{Jul. \apo09}
+{}
+\headedsubsection
+{First Prize (rank 2$^{nd}$), National Olympiad in Informatics in Hebei province}
+{Nov. \apo08}
+{}
+
+\spacedhrule{0.5em}{-0.8em}
+
+\roottitle{Skills}
+
+\inlineheadsection{Programming:}{C, OpenCL, Python, Verilog, Bash.}
+\inlineheadsection{Web development:}{JavaScript, HTML, CSS, PHP, Node.js, Flask.}
+\inlineheadsection{Linux:}{Kernel development, Network management, Server operations and monitoring.}
+\inlineheadsection{Gitlab:}{\href{https://git.ustclug.org/u/boj}{https://git.ustclug.org/u/boj}}
+
+
+
+\end{document}
+
+＀
