@@ -31,7 +31,7 @@
 
 
 % title on top of the document
-\maintitle{Bojie Li}{}{Last update on \today}
+\maintitle{SIGCOMM'16 Travel Grant Application Letter\\Bojie Li}{}{Last update on \today}
 
 \nobreakvspace{0.3em}  % add some page break averse vertical spacing
 
@@ -41,8 +41,7 @@
 % \href well..
 % \\ breaks the line into a new paragraph
 \noindent\href{mailto:boj@mail.ustc.edu.cn}{boj\mbox{}@\mbox{}mail.ustc.edu.cn}\sbull
-\textsmaller{+}86.15011272877\sbull
-Blog: \href{https://ring0.me/}{ring0.me} (Chinese)
+\textsmaller{+}86.15011272877
 \\
 \noindent 2nd year Ph.D. student\sbull
 Joint Ph.D. program with USTC and MSRA
@@ -50,210 +49,99 @@ Joint Ph.D. program with USTC and MSRA
 
 \spacedhrule{0.8em}{-0.8em}  % a horizontal line with some vertical spacing before and after
 
-\roottitle{Education}
+\roottitle{Personal Info}
 
-\headedsection  % sets the header for the section and includes any subsections
-{\href{http://ustc.edu.cn}{University of Science and Technology of China}}
-{\textsc{Hefei, Anhui, China}} {%
-	\headedsubsection
-	{Ph.D. in Computer Science}
-	{Sept. \apo14 -- present}
-	{\bodytext{Joint Ph.D. program with Microsoft Research. Advisor: \href{http://research.microsoft.com/en-us/people/kuntan/}{Kun Tan} in \href{http://research.microsoft.com/en-us/groups/wn/}{Wireless and Networking group.}}}
-}
+\inlineheadsection{Country:}{P.R. China.}
+\inlineheadsection{Academic status:}{Ph.D. Student.}
+\inlineheadsection{GeoDiversity:}{I think I'm qualified for GeoDiversity travel grant, because I'm the 4th first author in mainland China that have published a paper in SIGCOMM.}
 
-\headedsection  % sets the header for the section and includes any subsections
-{\href{http://ustc.edu.cn}{University of Science and Technology of China}}
-{\textsc{Hefei, Anhui, China}} {%
-	\headedsubsection
-	{B.S. in Computer Science (School of Gifted Young)}
-	{Sept. \apo10 -- June \apo14}
-	{}
-}
+\spacedhrule{1.0em}{-0.8em}  % a horizontal line with some vertical spacing before and after
 
-\spacedhrule{0.5em}{-0.8em}
+\roottitle{Paper}
 
-\roottitle{Research Interests}
+\inlineheadsection{Author:}{I'm the first author of paper \textit{ClickNP: Highly Flexible and High-performance Network Processing with Reconfigurable Hardware} accepted to SIGCOMM'16.}
+\inlineheadsection{SRC:}{I will participate in the ACM Student Research Competition (SRC).}
 
-\inlineheadsection{Data center networking:}{Network function virtualization.}
+\spacedhrule{1.0em}{-0.8em}  % a horizontal line with some vertical spacing before and after
+
+\roottitle{Ph.D. Program}
+
+I'm in a joint Ph.D. program with University of Science and Technology of China (USTC) and Microsoft Research Asia (MSRA), advised by  \href{http://research.microsoft.com/en-us/people/kuntan/}{Dr. Kun Tan}.
+
+My position at MSRA is a research intern and MSRA cannot cover travel expense for interns. My home institution, USTC, can cover travel expense up to 10,000 RMB (1,500 USD) per each Ph.D. student. However, as we will show later, this is insufficient to cover all costs.
+
+\spacedhrule{0.8em}{-0.8em}  % a horizontal line with some vertical spacing before and after
+
+\roottitle{Research Interest}
+
+\inlineheadsection{Data center networking:}{Network function virtualization, Network programming.}
 \inlineheadsection{Reconfigurable hardware:}{High level synthesis, Heterogeneous computing.}
 
-\spacedhrule{1.0em}{-0.8em}
+\spacedhrule{1.0em}{-0.8em}  % a horizontal line with some vertical spacing before and after
 
-\roottitle{Publications}
+\roottitle{Research Summary and Plan}
 
-\inlineheadsection
-{ClickNP: Highly Flexible and High-performance Network Processing with Reconfigurable Hardware}
-{\textbf{Bojie Li}, Kun Tan, Layong (Larry) Luo, Yanqing Peng, Renqian Luo, Ningyi Xu, Yongqiang Xiong and Peng Cheng \\
-\textit{Proceedings of the 2016 ACM conference on SIGCOMM} (\textbf{SIGCOMM'16}) (to appear)
-}
+Highly flexible network functions are critical components to enable multi-tenancy in cloud environments.
+ASICs and network processors provide the best performance, but not flexible enough to implement novel network functions.
+CPUs and GPUs are highly programmable, but inefficient in terms of power, throughput and latency.
+Reconfigurable hardwares, namely FPGA, are architectures between the two extremes above.
+Modern FPGAs have millions of reconfigurable logic gates, hundreds Kbit registers, thousands of memory blocks, and in theory, each of them can work in parallel.
+The massive parallelism enables FPGA to outperform CPU and GPU at a clock frequency that is an order of magnitude lower.
 
-\vspace{0.5em}
+However, FPGAs are historically expensive due to its small user base, and programmed with hardware description languages (HDLs) with low abstraction level and high programming complexity.
+Fortunately, both problems are being resolved in the last few years.
+First, FPGAs are being deployed at scale in datacenters and becoming inexpensive.
+Second, high-level synthesis (HLS) tools have been developed to convert a program in high-level language into HDLs.
 
-\inlineheadsection
-{Fast and Cautious: Leveraging Multi-path Diversity for Transport Loss Recovery in Data Centers \quad}
-{Guo Chen, Yuanwei Lu, Yuan Meng, \textbf{Bojie Li}, Kun Tan, Dan Pei, Peng Cheng, Layong (Larry) Luo, Yongqiang Xiong, Xiaoliang Wang and Youjian Zhao \\
-	\textit{Proceedings of the 2016 USENIX Annual Technical Conference} (\textbf{ATC'16}) (to appear)
-}
+ClickNP is the first FPGA-accelerated packet processing platform for general network functions, written completely in high-level language and achieving 40Gbps line rate.
+However, ClickNP is far from perfect and should be merely a starting point.
 
-\vspace{0.5em}
-
-\spacedhrule{0.8em}{-0.8em}
-
-\roottitle{Research Experience (selected)}
-
-\headedsection  % sets the header for the section and includes any subsections
-  {ClickNP Packet Processing Platform on FPGA}
-  {\textsc{Microsoft Research Asia}} {%
-  \headedsubsection
-    {SIGCOMM'16, first author, instructed by \href{http://research.microsoft.com/en-us/people/kuntan/}{Kun Tan}}
-    {July \apo15 -- Jan. \apo16}
-    {\bodytext{
-    	\begin{itemize}
-    	\item The first FPGA-accelerated platform for general network functions, written completely in high-level language and achieving 40 Gbps line rate as well as $<2\mu$s latency at any packet size.
-    	\item Support high throughput (25Gbps) and low latency (1$\mu$s) joint CPU-FPGA processing.
-    	\item Implement the ClickNP tool-chain, which can integrate with various commercial HLS tools.
-    	\item Work with two senior undergraduates to design and implement 100 elements and 5 network functions.
-    	\end{itemize}
-    }}
-}
-
-\headedsection  % sets the header for the section and includes any subsections
-  {Fault-tolerant Switch Software Architecture}
-  {\textsc{Microsoft Research Asia}} {%
-	\headedsubsection
-	{B.S. dissertation, instructed by \href{http://research.microsoft.com/en-us/people/kuntan/}{Kun Tan}}
-	{July \apo13 -- May \apo14}
-	{\bodytext{
-	\begin{itemize}
-		\item Design and implementation of a fault-tolerant switch software architecture allowing any component to fail or upgrade without interrupting data plane.
-		\item The control plane will automatically recover within 1 minute after the failed component restarts. 
-		\item Designed a daemon (SyncD) to virtualize lookup tables in programmable switching chip and resolve rule conflicts among clients.
-	\end{itemize}
-}}
-}
-
-\spacedhrule{0.5em}{-0.8em}
-
-\roottitle{Engineering Experience (selected)}
-
-\headedsection  % sets the header for the section and includes any subsections
-{\href{https://git.ustclug.org/boj/freeshell}{USTC Freeshell}}
-{\textsc{Univ. of Science and Tech. of China}} {%
-	\headedsubsection
-	{Founder and main developer}
-	{Jan. \apo13 -- July \apo14}
-	{\bodytext{
-			\begin{itemize}
-				\item Container-based IaaS service based on OpenVZ virtualization, supporting various Linux distributions.
-				\item Support migration, IPv4 \& IPv6, NAPT, port mapping and HTTP(S) proxy.
-				\item Support $\sim$2,000 active containers with merely 7 compute nodes, 1 storage node, 1 controller node and 2 network nodes. Optimize NFS and leverage local disk cache to improve storage efficiency.
-				\item The first IaaS service in USTC, have $\sim$1,500 users. 7K lines of PHP and 1K lines of bash code.
-			\end{itemize}
-		}}
-	}
-
-\headedsection  % sets the header for the section and includes any subsections
-{\href{https://git.ustclug.org/boj/openvpn-server/blob/master/www/index.html}{LUG VPN}}
-{\textsc{Univ. of Science and Tech. of China}} {%
-	\headedsubsection
-	{Founder and main developer}
-	{Jul. \apo13 -- July \apo14}
-	{\bodytext{
-			\begin{itemize}
-				\item Geolocation DNS-based policy routing, load balancing and failure recovery.
-				\item Access points and exit gateways in 6 ISPs, connected via GRE tunnels in star topology.
-				\item $\sim$1K active users, $\sim$10K active flows and $\sim$500 Mbps traffic in peak periods.
-			\end{itemize}
-		}}
-	}
-
-\headedsection  % sets the header for the section and includes any subsections
-{\href{https://git.ustclug.org/boj/compiler-backdoor}{Embedding Backdoor in an Open Source Compiler}}
-{\textsc{Univ. of Science and Tech. of China}} {%
-	\headedsubsection
-	{Course project of Hacker Reverse Engineering Technology}
-	{Sept. \apo12 -- Jan. \apo13}
-	{\bodytext{
-			\begin{itemize}
-				\item Implement Ken Thompson's Turing Award lecture \textit{Reflections of Trusting Trust} on \textbf{tcc} compiler.
-				\item Inserts backdoor to matches \textbf{sulogin} source code to insert login backdoor. The compiler backdoor bootstraps by matching its own source code.
-			\end{itemize}
-		}}
-	}
-
-\headedsection  % sets the header for the section and includes any subsections
-{\href{https://git.ustclug.org/boj/rtfs}{Real-time Disk File System}}
-{\textsc{Univ. of Science and Tech. of China}} {%
-	\headedsubsection
-	{Course project of Principles and Design of Operating Systems}
-	{Mar. \apo12 -- June \apo12}
-	{\bodytext{
-			\begin{itemize}
-			\item Improve block device scheduling algorithm and process 
-				   scheduler for RTLinux-3.2 to enforce strict priority and eliminate disruptions from non-real-time tasks.
-			\item Guarantee response time and throughput for real-time 
-				   tasks with burst, random, streaming or pipeline I/O modes.
-			\end{itemize}
-		}}
-	}
-
-\spacedhrule{0.5em}{-0.8em}
-
-\roottitle{Selected Awards}
-
-\headedsubsection
-{Microsoft Young Fellowship Scholarship}
-{Aug. \apo13}
-{}
-\headedsubsection
-{Best Creativity Award, Robogame 2011, USTC}
-{Oct. \apo11}
-{}
-\headedsubsection
-{First Prize (rank 10$^{th}$), China Mathematical Olympiad in Hebei province}
-{Oct. \apo09}
-{}
-\headedsubsection
-{Bronze Medal (rank 69$^{th}$), National Olympiad in Informatics}
-{Jul. \apo09}
-{}
-\headedsubsection
-{First Prize (rank 2$^{nd}$), National Olympiad in Informatics in Hebei province}
-{Nov. \apo08}
-{}
-
-\spacedhrule{0.5em}{-0.8em}
-
-\roottitle{Extracurricular Activities}
-
-\headedsubsection
-{Teaching Assistant, Advanced Software Engineering course, MSRA}
-{Sept. \apo15 -- Jan. \apo16}
-{}
-\headedsubsection
-{President, Linux User Group, USTC}
-{May \apo12 -- May \apo13}
-{}
-\headedsubsection
-{DevOps, GewuIT Startup Team, USTC}
-{Sept. \apo12 -- May \apo13}
-{}
-\headedsubsection
-{Founder, Technology team, Student Union, School of Gifted Young}
-{Sept. \apo11 -- May \apo12}
-{}
-
-\spacedhrule{0.5em}{-0.8em}
-
-\roottitle{Skills}
-
-\inlineheadsection{Programming:}{C, OpenCL, Python, Verilog, Bash.}
-\inlineheadsection{Web development:}{JavaScript, HTML, CSS, PHP, Node.js, Flask.}
-\inlineheadsection{Linux:}{Kernel development, Network management, Server operations and monitoring.}
-\inlineheadsection{Gitlab:}{\href{https://git.ustclug.org/u/boj}{https://git.ustclug.org/u/boj}}
+\begin{enumerate}
+	\item Programming in ClickNP is far more restrictive than on CPU.
+	We need to carefully write code in a subset of OpenCL and give optimization hints to the compiler in order to exploit parallelism and generate efficient hardware.
+	Higher-level programming abstractions and automated optimizations can be future works.
+	\item FPGA is inefficient for tasks with low parallelism or high memory footprint, and it has limited area to hold logic.
+	It is natural to ask whether there is a principled way to split a task on CPU and FPGA, given target throughput, resource constraints and communication cost.
+	We will also rethink the role of FPGA as merely co-processor and build heterogeneous computing platforms making the most of CPUs and FPGAs.
+	\item The massive parallelism makes FPGA a compelling platform for general computing acceleration.
+	The accurate clocking makes FPGA irreplaceable for low latency general computing.
+	We plan to extend the boundary of reconfigurable hardware by applying FPGAs to more areas, including but not limited to networking, crypto, distributed computing and machine learning.
+\end{enumerate}
 
 
+\spacedhrule{0.5em}{-0.8em}  % a horizontal line with some vertical spacing before and after
+
+\roottitle{Why Attend SIGCOMM}
+
+At the SIGCOMM conference, I plan to:
+\begin{enumerate}
+	\item Present the paper in main conference.
+	\item Show a demo of ClickNP applications. (1) An Open vSwitch that supports L2 network virtualization with NVGRE. Additionally, the switch supports packet classification for firewall and strict priority queue for scheduling.
+	(2) A stateful L4 load balancer that supports up to 32M concurrent flows and can accept 10M new flows per second.
+	(3) As a final demo, we show that ClickNP is rather a general computing platform. We show a face detector in live video stream with convolutional neural network (CNN).
+	\item Search for opportunity to collaborate with the community and release ClickNP as a software that can integrate with an open network processing platform. ClickNP is a platform that may be useful to the network research community. 
+\end{enumerate}
+
+To me, it is the first time to submit a paper and attend an international conference. I'm really honored that my first paper gets accepted to the prestigious SIGCOMM conference. I treasure this opportunity very much as it will broaden my view, as well as giving me a chance to get in touch with worldwide researchers and collaborate on my future research.
+
+\spacedhrule{1.0em}{-0.8em}  % a horizontal line with some vertical spacing before and after
+
+\roottitle{Cost Estimate}
+
+\inlineheadsection{Conference Registration:}{300 USD.}
+\inlineheadsection{Air Ticket:}{$\approx$ 1,500 USD. \href{http://english.ctrip.com/flights/beijing-to-florianopolis/tickets-bjs-fln/?flighttype=d\&dcity=bjs\&acity=fln\&relddate=86\&relrdate=93\&startdate=2016-08-20\&returndate=2016-08-27\&startday=sat\&returnday=sat\&relweek=12\&searchboxArg=t}{Reference Link}}
+\inlineheadsection{Train Ticket within China:}{$\approx$ 150 USD.}
+\inlineheadsection{Accomodation:}{$\approx$ 300 USD for 6 days. \href{http://conferences.sigcomm.org/sigcomm/2016/hotel.php}{Reference Link}}
+\inlineheadsection{Brazil Visa Application:}{120 USD. \href{http://www.vfsglobal.cn/BRAZIL/CHINA/visa\_fees\_at\_glance.html}{Reference Link}}
+\inlineheadsection{France Transit Visa Application:}{60 EUR. \href{http://www.ambafrance-cn.org/\%E7\%AD\%BE\%E8\%AF\%81\%E8\%B4\%B9\%E7\%94\%A8\%E8\%A1\%A8}{Reference Link}}
+\inlineheadsection{Total Cost:}{$\approx$ 2,440 USD.}
+\inlineheadsection{Travel Grant from Home Institution:}{10,000 RMB (1,500 USD). China is a developing country and my home institution, USTC, is in a relatively poor city (Hefei). USTC has limited travel grant for Ph.D. students to attend international conferences.  Microsoft Research does not provide travel grant for interns.}
+\inlineheadsection{Cost Shortage:}{2,440 USD $-$ 1,500 USD = 940 USD.}
+
+\spacedhrule{1.0em}{-0.8em}  % a horizontal line with some vertical spacing before and after
+
+\roottitle{Thanks}
+
+I understand that preference will be given to applicants that do not present a paper in the conference. But China is really far from Brazil and the air ticket is expensive. Furthermore, my home institution does not have enough budget to cover full travel expense. I really appreciate if you could give me funding to attend the SIGCOMM conference. Thanks!
 
 \end{document}
-
-＀
